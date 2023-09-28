@@ -52,16 +52,25 @@ include('php/data.php');
       <?php endforeach; ?>
     </table>
     <div class="asignaturas">
-      <!--PHP-->
-      <?php
-
-      foreach ($modulos as $sigla => $info) {
-        echo  "<div class='asignatura'>" . $sigla . "<span id='$sigla'></span><br>";
-        echo  $info["modulo"] . "<br>";
-        echo "Profesor: " . $info["profesor"] . "<br></div>";
-      }
-
-      ?>
+      <table>
+        <thead>
+          <tr>
+            <th>Módulo</th>
+            <th>Descripción</th>
+            <th>Profesor</th>
+            <th>+</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php foreach ($modulos as $modulo => $descripcion) : ?>
+            <tr id="<?= $modulo ?>">
+              <td><?= $modulo ?></td>
+              <td><?= $descripcion["modulo"] ?></td>
+              <td><?= $descripcion["profesor"] ?></td>
+            </tr>
+          <?php endforeach; ?>
+        </tbody>
+      </table>
 
     </div>
   </div>
