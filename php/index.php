@@ -26,7 +26,6 @@ include('data.php');
       foreach ($integrantes as $integrante) {
         echo "<li>" . $integrante . "</li>";
       }
-
       ?>
     </ul>
   </div>
@@ -39,7 +38,6 @@ include('data.php');
           <th><?php echo $dia; ?></th>
         <?php endforeach; ?>
       </tr>
-
       <?php foreach ($horas as $hora => $clases) : ?>
         <tr>
           <td><?php echo $hora; ?></td>
@@ -55,8 +53,13 @@ include('data.php');
     </table>
     <div class="asignaturas">
       <!--PHP-->
-
       <?php
+
+      foreach ($modulos as $sigla => $info) {
+        echo  "<div class='asignatura'>" . $sigla . "<span id='$sigla'></span><br>";
+        echo  $info["modulo"] . "<br>";
+        echo "Profesor: " . $info["profesor"] . "<br></div>";
+      }
 
       ?>
 
