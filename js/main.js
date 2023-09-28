@@ -5,9 +5,9 @@ const DWEC = document.getElementById('DWEC').textContent;
 const EIE = document.getElementById('EIE').textContent;
 const ITGS = document.getElementById('ITGS').textContent; 
 
-function agregarMas(){
+function agregarMas(valor){
     // Obtener el texto actual textContent es como innerhtml
-    let textoActual = DAW.textContent;
+    let textoActual = valor.textContent;
     textoActual += '+';
-    DAW.textContent = textoActual;
+    valor.textContent = textoActual;
 }
