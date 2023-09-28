@@ -63,7 +63,7 @@ include('php/data.php');
         </thead>
         <tbody>
           <?php foreach ($modulos as $modulo => $descripcion) : ?>
-            <tr id="<?= $modulo ?>">
+            <tr id="<?= $modulo ?>" onclick="agregarMas('<?= $modulo ?>')">
               <td><?= $modulo ?></td>
               <td><?= $descripcion["modulo"] ?></td>
               <td><?= $descripcion["profesor"] ?></td>
